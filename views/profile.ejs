@@ -1,0 +1,50 @@
+<%- include('./header/header.ejs'); %>
+<link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+  <%- include('./header/navbar.ejs') %>
+  <div class="container">
+    <% if(profile){ %>
+    <div class="row">
+      <div class="col-md-3">
+          <img src="/assets/profile.png" class="profile-pic">
+      </div>
+      <div class="col-md-9 pt-4 mt-4">
+        <h1 class="display-1"><%= profile.name %></h1>
+        <h4><b>E-mail: </b><%= profile.email %></h4>
+        <h3><b>Mobile No.: </b><%= profile.mobile %></h3>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-9 mt-4">
+            <h1>Residence:</h1>
+            <hr>
+            <h3><b>Address: </b><%= profile.address %></h3>
+            <h3><b>City: </b><%= profile.city %></h3>
+            <h3><b>State: </b><%= profile.state %></h3>
+            <h3><b>Country: </b><%= profile.country %></h3>
+        </div>
+        <div class="col-md-3">
+            <img src="/assets/residence.png" class="profile-pic">
+        </div>
+      </div>
+      <br>
+      <h1>Profession:</h1>
+      <hr>
+      <% profile.profession.forEach(element => {%>
+      <div class="row">
+        <div class="col-md-3">
+            <img src="https://img.icons8.com/ios/100/000000/company.png" style="width: 60%; height: 80%;"/>
+        </div>
+        <div class="col-md-9 mt-4">
+            <h2><u><b><%= element.company %></b></u></h2>
+            <h4><b>Occupation: </b><%= element.occupation %></h4>
+            <h4><b>Country: </b><%= element.experience %></h4>
+        </div>
+      </div>
+    <%  });  %>
+      <% } %>
+  </div>
+</body>
+<%-include('./header/footer.ejs') %>

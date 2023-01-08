@@ -1,0 +1,50 @@
+<%- include('./header/header.ejs') %>
+<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <main class="d-flex align-items-center">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+            <!-- <div class="col-md-6">
+            </div> -->
+            <div class="col-md-12 login-div">
+                <div>
+                    <img src="/assets/logo.png" class="logo">
+                </div>
+                <div class="text-center mt-2 mb-2">
+                    <h2 class="fs-1">Welcome to login page</h2>
+                </div>
+                <div>
+
+                </div>
+                <form action="/login" method="POST">
+                    <div class="mb-3 ps-4 pe-4">
+                        <label for="email" class="form-label">Email address</label>
+                        <input required name="email" type="email" class="form-control <%= error=='userError'?'is-invalid':'' %>" id="email-input" value='<%= email==''?'':email %>' placeholder="Enter your email">
+                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                          User doesn't exist..
+                        </div>
+                      </div>
+                      <div class="mb-3 ps-4 pe-4">
+                        <label for="password" class="form-label">Password</label>
+                        <input required name="password" type="password" class="form-control <%= error=='passwordError'?'is-invalid':'' %>" value='<%= password==''?'':password %>' id="password-input" placeholder="*********">
+                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                          Incorrect Password..
+                        </div>
+                      </div>
+                      </div>
+                      <div class="mb-3 ps-4 pe-4">
+                        <h6 style="display:inline-flex;" class="pe-2">Come join us </h6><a href="http://localhost:3000/sign-up">Register Here</a>
+                      </div>
+                      <div>
+                            <input type="submit" class="btn btn-outline-dark login-btn" value="Login">
+                     </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<%- include('./header/footer.ejs') %>

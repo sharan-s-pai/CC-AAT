@@ -1,0 +1,18 @@
+.proj-img{
+    width:100%;
+    height: 100%;
+}
+
+.project-container{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: solid black 1px;
+    border-radius: 0.5rem;
+    box-shadow: 12px 12px 2px 1px rgba(214, 214, 244, 0.2);
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+.para{
+    text-align: justify;
+}

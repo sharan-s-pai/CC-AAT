@@ -1,0 +1,41 @@
+body {
+  font-family: "Karla", sans-serif;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #e5e5f7 10px
+    ),
+    repeating-linear-gradient(#34f4d455, #44d9f7);
+}
+.logo {
+  width: 140px;
+  height: 100px;
+  align-items: center;
+  display: block;
+  margin: auto;
+}
+.login-div {
+  padding-top: 70px;
+}
+
+.login-btn {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+
+.login-card {
+  position: relative;
+  top: 28px;
+  /* height: 600px; */
+  padding-bottom: 100px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: 0;
+  background-color: #fff;
+  border-radius: 27.5px;
+  box-shadow: 0 50px 100px 0 rgba(172, 168, 168, 0.43);
+  overflow: hidden;
+}
