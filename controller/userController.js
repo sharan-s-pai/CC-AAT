@@ -11,7 +11,8 @@ let fillValuesForProject = (req, body) => {
 };
 
 exports.getProfile = (req, res, next) => {
-  User.findOne()
+  const id = req.session.user._id
+  User.findById(id)
     .then((user) => {
       if (!user) {
         return res.redirect("/login");

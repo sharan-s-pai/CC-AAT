@@ -81,7 +81,7 @@ app.use('/',(req,res,next)=>{
 
 mongoose.connect(MONGO_URI)
 .then(()=>{
-  console.log("Server Connected");
+  console.log("Server Connected to "+process.env.PORT);
   app.listen(process.env.PORT)
 })
 .catch((err)=>{
